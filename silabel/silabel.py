@@ -77,10 +77,10 @@ class Syllabelizer(BaseFonologi):
             else:
                 skip = False
                 
-        # Handle silabel terakhir
-        if not skip:
-            if s_b in (self.konsonan + self.diftong_konsonan):
-                result[-1] += s_b
-            else:
-                result.append(s_b)
+            # Handle silabel terakhir
+            if not skip:
+                if s_b in (self.konsonan + self.diftong_konsonan):
+                    result[-1] += s_b
+                else:
+                    result.append(s_b)
         return result
